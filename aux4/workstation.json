@@ -54,7 +54,7 @@
             "touch .env.development",
             "touch .env.production",
             "echo '\"build:dev\": \"env-cmd -f ./.env.development npm run build\"'",
-            "echo '\"build:prod\": \"env-cmd -f ./.env.production npm run build\"'",
+            "echo '\"build:prod\": \"env-cmd -f ./.env.production npm run build\"'"
           ]
         }
       ]
