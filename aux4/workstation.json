@@ -1,0 +1,63 @@
+{
+  "package": {
+    "name": "pairing-with-me-workstation",
+    "version": "1.0.0"
+  },
+  "profiles": [
+    {
+      "name": "main",
+      "commands": [
+        {
+           "value": "npm",
+           "execute": [
+             "profile:npm"
+           ]
+        }
+      ]
+    },
+    {
+      "name": "npm",
+      "commands": [
+        {
+          "value": "install",
+          "execute": [
+            "profile:npm:install"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "npm:install",
+      "commands": [
+        {
+          "value": "font-awesome",
+          "execute": [
+            "npm install @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome"
+          ]
+        },
+        {
+          "value": "mui",
+          "execute": [
+            "npm install @mui/material @emotion/react @emotion/styled @mui/styled-engine-sc @mui/lab styled-components react-router-dom @aux4/dispatcher.js @aux4/use-handler react-helmet notistack"
+          ]
+        },
+        {
+          "value": "markdown",
+          "execute": [
+            "npm install react-markdown remark-gfm"
+          ]
+        },
+        {
+          "value": "env",
+          "execute": [
+            "npm install --save-dev env-cmd",
+            "touch .env.development",
+            "touch .env.production",
+            "echo '\"build:dev\": \"env-cmd -f ./.env.development npm run build\"'",
+            "echo '\"build:prod\": \"env-cmd -f ./.env.production npm run build\"'",
+          ]
+        }
+      ]
+    }
+  ]
+}
