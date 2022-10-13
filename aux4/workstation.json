@@ -44,7 +44,7 @@
         {
           "value": "markdown",
           "execute": [
-            "npm install react-markdown remark-gfm"
+            "npm install react-markdown remark-gfm react-syntax-highlighter"
           ]
         },
         {
